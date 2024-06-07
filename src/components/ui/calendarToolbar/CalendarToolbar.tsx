@@ -1,25 +1,23 @@
 import { ToolbarProps } from 'react-big-calendar';
+import styles from './calendarToolbar.module.scss';
+import {Arrow} from "../arrow";
 
 export const CalendarToolbar = ({ label, onNavigate }:ToolbarProps) => {
     return (
-        <div>
-      <span >
-        <button type="button" onClick={() => onNavigate('PREV')}>
-          Назад
-        </button>
-          <span>{label}</span>
-        <button type="button" onClick={() => onNavigate('NEXT')}>
-          Вперед
-        </button>
-      </span>
-            <span>
-                <button type="button" onClick={() => onNavigate('TODAY')}>
-                Сегодня
+        <div className={styles.toolbar}>
+            <div className={styles.navigation}>
+                <Arrow direction="left" onClick={() => onNavigate('PREV')} />
+                <span className={styles.label}>{label}</span>
+                <Arrow direction="right" onClick={() => onNavigate('NEXT')} />
+            </div>
+            <div className={styles.containerToday}>
+                <button className={styles.today} type="button" onClick={() => onNavigate('TODAY')}>
+                    Сегодня
                 </button>
-                <button type="button" onClick={() => onNavigate('TODAY')}>
-                ?
+                <button type="button" className={styles.question}>
+                    ?
                 </button>
-            </span>
+            </div>
         </div>
-    );
-};
+    )
+}
