@@ -11,6 +11,8 @@ import {CalendarToolbar} from "../calendarToolbar"
 import {AddEditEventModal} from "../modal/addEventModal"
 import {InfoEventModal} from "../modal/infoEventModal"
 
+import styles from './myCalendar.module.scss'
+
 const locales = {
     'ru': ru,
 }
@@ -96,7 +98,7 @@ export const MyCalendar = () => {
                     ...events[editedEventIndex],
                     start,
                     end,
-                    title: `${formattedStart}-${formattedEnd} ${newTitle}`
+                    title: `${formattedStart}-${formattedEnd}${newTitle}`
                 }
                 const updatedEvents = [...events]
                 updatedEvents[editedEventIndex] = updatedEvent
@@ -112,10 +114,11 @@ export const MyCalendar = () => {
             style: {
                 backgroundColor: background,
                 border: '0.5px solid #BBE7B9',
+                borderRadius:'2px',
                 fontFamily: 'Circe Rounded',
-                fontSize: '12px',
+                fontSize: '10px',
                 fontWeight: '400',
-                lineHeight: '16.2px',
+                lineHeight: '8px',
                 textAlign: 'left' as const,
                 color: '#323854'
             }
@@ -123,7 +126,7 @@ export const MyCalendar = () => {
     }
 
     return (
-        <div style={{ height: '100vh', width: '100%' }}>
+        <div className={styles.container}>
             <Calendar
                 localizer={localizer}
                 events={events}
