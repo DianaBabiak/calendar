@@ -1,6 +1,6 @@
 import styles from "./promotionalCard.module.scss";
-import {Card} from "../Card.tsx";
-import cardImg from "../../../../assets/cardImg.png";
+import {Card} from "../ui/card";
+import cardImg from "../../assets/spaceWolf.png";
 
 export const PromotionalCard = ()=>{
     return(

@@ -1,10 +1,10 @@
 import styles from "./mainPage.module.scss"
 import {Container} from "../../components/ui/container";
-import {PromotionalCard} from "../../components/ui/card/promotionalCard";
-import {TimerCard} from "../../components/ui/card/timerCard";
+import {PromotionalCard} from "../../components/promotionalCard";
+import {TimerCard} from "../../components/timerCard";
 import {SmallCard} from "../../components/ui/card/smallCard";
-import {BalanceCard} from "../../components/ui/card/balanceCard";
-import {ScheduleCard} from "../../components/ui/card/scheduleCard";
+import {BalanceCard} from "../../components/balanceCard";
+import {ScheduleCard} from "../../components/scheduleCard";
 
 export const MainPage = ()=>{
     return(

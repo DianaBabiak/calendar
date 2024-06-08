@@ -14,6 +14,7 @@ export const SmallCard = ({title, iconId, background ='primary'}:SmallCardProps)
         { [styles.primary]: background === 'primary' },
         { [styles.secondary]: background === 'secondary' }
     );
+
     return(
                 <Card className={cardContainerClassName}>
                     <div>

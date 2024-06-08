@@ -7,8 +7,8 @@ import startOfWeek from "date-fns/startOfWeek"
 import getDay from "date-fns/getDay"
 import { v1 } from 'uuid'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-import {CalendarToolbar} from "../calendarToolbar"
-import {AddEditEventModal} from "../modal/addEventModal"
+import {CalendarToolbar} from "../../calendarToolbar"
+import {AddEditEventModal} from "../modal/addEditEventModal"
 import {InfoEventModal} from "../modal/infoEventModal"
 
 import styles from './myCalendar.module.scss'

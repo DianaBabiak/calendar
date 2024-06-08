@@ -6,7 +6,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import {Modal} from "../Modal.tsx";
 import {Event} from "../../myCalendar";
 
-interface InfoEventModal {
+interface InfoEventModalProps {
     open: boolean
     setOpen: (open: boolean) => void;
     event:Event | null
@@ -16,7 +16,7 @@ interface InfoEventModal {
 
 }
 
-export const InfoEventModal = ({ open, setOpen, event, handleDeleteEvent, handleOpenEditModal, handleClose}: InfoEventModal) => {
+export const InfoEventModal = ({ open, setOpen, event, handleDeleteEvent, handleOpenEditModal, handleClose}: InfoEventModalProps) => {
     const handleDelete =()=>{
         if(event){
             handleDeleteEvent(event.id)

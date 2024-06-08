@@ -1,6 +1,6 @@
 import { ToolbarProps } from 'react-big-calendar';
 import styles from './calendarToolbar.module.scss';
-import {Arrow} from "../arrow";
+import {Arrow} from "../ui/arrow";
 
 export const CalendarToolbar = ({ label, onNavigate }:ToolbarProps) => {
     return (
