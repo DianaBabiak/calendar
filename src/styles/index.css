@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+input,
+button,
+select,
+textarea,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+
+    font-family: 'Circe Rounded', sans-serif;
+    line-height: 21px;
+    color: var(--color-accent-900);
+
+    background-color: var(--color-light-100);
+    max-width: 1440px;
+}
+
+.rbc-off-range-bg {
+    background: none;
+    opacity: 1;
+}
+
+.rbc-header + .rbc-header {
+    border-left:none;
+}
+.rbc-month-view{
+    border:none;
+    border-bottom:solid 1px #ddd;
+}
+
+.rbc-row-bg{
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+}
+
+.rbc-header{
+    text-align: end;
+    text-transform: capitalize;
+}
+
+.rbc-today {
+    background-color: #EEEEFF;
+}
+
+.rbc-ellipsis, .rbc-show-more, .rbc-row-segment .rbc-event-content, .rbc-event-label {
+    white-space: normal;
+}
+

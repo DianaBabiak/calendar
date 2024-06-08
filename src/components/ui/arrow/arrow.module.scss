@@ -1,0 +1,15 @@
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: var(--color-dark-100);
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

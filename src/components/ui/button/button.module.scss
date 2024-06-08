@@ -1,0 +1,40 @@
+.buttonContainer {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-weight: 400;
+  display: inline-block;
+  outline: none;
+  vertical-align: middle;
+
+  &:hover{
+    scale: 1.02;
+  }
+
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.small{
+  padding: 8px 10px 8px 10px;
+  gap: 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.large{
+  height: 40px;
+  padding: 10px 40px 10px 40px;
+  gap: 8px;
+  border-radius: 30px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.fixedWidth{
+  width: 220px;
+}
