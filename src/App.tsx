@@ -1,14 +1,16 @@
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFnsV3'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import {CalendarPage} from "./pages/calendarPage";
-import {MainPage} from "./pages/mainPage";
-import {SignIn} from "@/components/auth/login/singIn";
+import { Router } from '@/router'
+
 
 
 function App() {
 
     return (
-        <LocalizationProvider dateAdapter={AdapterDateFns}> <SignIn/></LocalizationProvider>
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <Router />
+        </LocalizationProvider>
+
 
     )
 }
