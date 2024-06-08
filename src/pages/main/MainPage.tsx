@@ -1,10 +1,10 @@
 import styles from "./mainPage.module.scss"
-import {Container} from "../../components/ui/container";
-import {PromotionalCard} from "../../components/promotionalCard";
-import {TimerCard} from "../../components/timerCard";
-import {SmallCard} from "../../components/ui/card/smallCard";
-import {BalanceCard} from "../../components/balanceCard";
-import {ScheduleCard} from "../../components/scheduleCard";
+import {Container} from "@/components/ui/container";
+import {PromotionalCard} from "@/components/promotionalCard";
+import {TimerCard} from "@/components/timerCard";
+import {SmallCard} from "@/components/ui/card/smallCard";
+import {BalanceCard} from "@/components/balanceCard";
+import {ScheduleCard} from "@/components/scheduleCard";
 
 export const MainPage = ()=>{
     return(
@@ -17,7 +17,6 @@ export const MainPage = ()=>{
                     <SmallCard title={'Отчеты от учителей'} iconId={'report'}/>
                 </div>
             </div>
-
             <div className={styles.cardsContainer}>
                 <BalanceCard/>
                 <ScheduleCard/>

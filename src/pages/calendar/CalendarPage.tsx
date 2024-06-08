@@ -1,14 +1,14 @@
 import Container from '@mui/material/Container';
-import {MyCalendar} from "../../components/ui/myCalendar";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Button from '@mui/material/Button';
 import {useState} from "react";
 import styles from "./calendarPage.module.scss"
+import {Button} from "@/components/ui/button";
+import {MyCalendar} from "../../components/myCalendar";
+import {LESSON_ITEMS} from "@/pages/calendar/constants.ts";
 
-const lessons = [{id:1,title:'Подготовка к школе'},{id:2,title:'Ментальная математика'},{id:3,title:'Рисование'},{id:4,title:'Скорочтение'} ]
 export const CalendarPage = ()=>{
     const [lesson, setLesson] = useState('');
 
@@ -28,11 +28,10 @@ export const CalendarPage = ()=>{
                         label="Выбрать предмет"
                         onChange={handleChange}
                     >
-                        {lessons.map(les=><MenuItem value={les.id}>{les.title}</MenuItem>)}
+                        {LESSON_ITEMS.map(les=><MenuItem value={les.id}>{les.title}</MenuItem>)}
                     </Select>
                 </FormControl>
-                <Button variant="contained" style={{background:'#DECFFF', width:'344px',borderRadius:'30px', color:'#323854', fontSize:'16px', boxShadow: 'none',}} >Изменить расписание</Button>
-
+                <Button size={'large'} className={styles.button} >Изменить расписание</Button>
             </div>
             <MyCalendar/>
         </Container>

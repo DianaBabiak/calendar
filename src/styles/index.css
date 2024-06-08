@@ -39,6 +39,8 @@ body {
 
     background-color: var(--color-light-100);
     max-width: 1440px;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
 .rbc-off-range-bg {

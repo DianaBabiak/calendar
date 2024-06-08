@@ -4,7 +4,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContentText from '@mui/material/DialogContentText';
 import {Modal} from "../Modal.tsx";
-import {Event} from "../../myCalendar";
+import {Event} from "../../../myCalendar";
 
 interface InfoEventModalProps {
     open: boolean

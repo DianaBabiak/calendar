@@ -6,6 +6,7 @@ export interface ContainerProps extends ComponentPropsWithoutRef<'main'> {
 }
 
 export const Container = ({className, ...rest }:ContainerProps) => {
+
     const containerClassNames = classNames(styles.container, className)
 
     return (
