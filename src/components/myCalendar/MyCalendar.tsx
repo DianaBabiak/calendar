@@ -1,33 +1,17 @@
 import { useState, useEffect } from 'react';
-import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
-import ru from 'date-fns/locale/ru';
-import format from 'date-fns/format';
-import parse from 'date-fns/parse';
-import startOfWeek from 'date-fns/startOfWeek';
-import getDay from 'date-fns/getDay';
+import { Calendar } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import { CalendarToolbar } from '../calendarToolbar';
-import { AddEditEventModal } from '../modal/addEventModal';
-import { InfoEventModal } from '../modal/infoEventModal';
+import { AddEditEventModal } from '../ui/modal/addEventModal';
+import { InfoEventModal } from '../ui/modal/infoEventModal';
 import styles from './myCalendar.module.scss';
 import {useAppDispatch, useAppSelector} from "@/state/store.ts";
 import {calendarEvents, errorMessage, isLoading} from "@/state/selectors.ts";
 import {addEvent, deleteEvent, editEvent, fetchEvents} from "@/state/calendar/calendarSlice.ts";
 import {v1} from "uuid";
 import {PreLoader} from "@/components/ui/preloader";
+import {localizer} from "@/components/myCalendar/constants.ts";
 
-
-const locales = {
-    ru: ru,
-};
-
-const localizer = dateFnsLocalizer({
-    format,
-    parse,
-    startOfWeek,
-    getDay,
-    locales,
-});
 export interface Event {
     id:string
     title: string

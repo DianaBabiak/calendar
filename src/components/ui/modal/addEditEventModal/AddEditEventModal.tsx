@@ -7,7 +7,7 @@ import {FormEvent, useEffect, useState} from "react";
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import {DATE_TIME_FORMAT} from "../constant.ts";
 import {Modal} from "../Modal.tsx";
-import {Event} from "../../myCalendar";
+import {Event} from "../../../myCalendar";
 
 interface AddEditEventModalProps {
     open: boolean

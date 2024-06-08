@@ -1,5 +1,5 @@
 import {v1} from "uuid";
-import {Event} from "@/components/ui/myCalendar"
+import {Event} from "../components/myCalendar"
 
 export const fetchEventsFromBackend = async (): Promise<Event[]> => {
     return new Promise((resolve) => {

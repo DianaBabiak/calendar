@@ -8,8 +8,8 @@ import {
 
 import { Error404 } from '@/pages/error404'
 import {SignIn} from "@/components/auth/login/singIn";
-import {MainPage} from "@/pages/mainPage";
-import {CalendarPage} from "@/pages/calendarPage";
+import {MainPage} from "@/pages/main";
+import {CalendarPage} from "@/pages/calendar";
 import {PreLoader} from "@/components/ui/preloader";
 import {Layout} from "@/layout ";
 

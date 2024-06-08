@@ -5,7 +5,7 @@ import {
     editEventOnBackend,
     fetchEventsFromBackend
 } from "@/api/calendarApi.ts";
-import {Event} from "@/components/ui/myCalendar"
+import {Event} from "../../components/myCalendar"
 
 export const fetchEvents = createAsyncThunk('events/fetchEvents', async () => {
     return await fetchEventsFromBackend()
