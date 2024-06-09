@@ -8,10 +8,10 @@ import {
 
 import { Error404 } from '@/pages/error404'
 import {SignIn} from "@/components/auth/login/singIn";
-import {MainPage} from "@/pages/main";
 import {CalendarPage} from "@/pages/calendar";
 import {PreLoader} from "@/components/ui/preloader";
 import {Layout} from "@/layout ";
+import {MainPage} from "@/pages/main";
 
 const publicRoutes: RouteObject[] = [
     {
@@ -39,7 +39,7 @@ function PrivateRoutes() {
         return <PreLoader />
     }
 
-    return isAuthenticated ? <Outlet /> : <Navigate to={'/login'} />
+    return isAuthenticated ? <Layout /> : <Navigate to={'/login'} />
 }
 
 function PublicRoutes() {
@@ -60,8 +60,6 @@ export const router = createBrowserRouter([
                 element: <PublicRoutes />,
             },
         ],
-        element: <Layout />,
-        path: '/',
     },
     {
         element: <Error404 />,
