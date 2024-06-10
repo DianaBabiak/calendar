@@ -5,7 +5,7 @@ import styles from './container.module.scss';
 export interface ContainerProps extends ComponentPropsWithoutRef<'main'> {
 }
 
-export const Container = ({className, ...rest }:ContainerProps) => {
+export const Container = ({className, ...rest}: ContainerProps) => {
 
     const containerClassNames = classNames(styles.container, className)
 

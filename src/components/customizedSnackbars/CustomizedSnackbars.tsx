@@ -5,14 +5,14 @@ import {useAppDispatch} from "@/state/store.ts";
 import {clearError} from "@/state/app/appSlice.ts";
 
 
-
-interface  CustomizedSnackbarsProps {
-    isOpen:boolean
-    error:string | null
+interface CustomizedSnackbarsProps {
+    isOpen: boolean
+    error: string | null
 }
-export  const CustomizedSnackbars= ({isOpen, error}:CustomizedSnackbarsProps)=> {
+
+export const CustomizedSnackbars = ({isOpen, error}: CustomizedSnackbarsProps) => {
     const dispatch = useAppDispatch()
-    const handleClose = (_:SyntheticEvent | Event, reason?: string) => {
+    const handleClose = (_: SyntheticEvent | Event, reason?: string) => {
         if (reason === 'clickaway') {
             return;
         }
@@ -27,7 +27,7 @@ export  const CustomizedSnackbars= ({isOpen, error}:CustomizedSnackbarsProps)=> 
                     onClose={handleClose}
                     severity="error"
                     variant="filled"
-                    sx={{ width: '100%' }}
+                    sx={{width: '100%'}}
                 >
                     {error}
                 </Alert>

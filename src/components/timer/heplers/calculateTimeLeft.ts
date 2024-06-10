@@ -1,9 +1,9 @@
-import {TimerFormat} from "../type.ts";
 import {DAY_TRANSLATE, HOURS_TRANSLATE, MINUTES_TRANSLATE} from "@/components/timer/constants.ts";
+import {TimerFormat} from "@/components/timer/type.ts";
 
 export const calculateTimeLeft = (targetDate: string): TimerFormat => {
     const timeDifference = new Date(targetDate).getTime() - new Date().getTime()
-    const defaultResponse: TimerFormat = { days: 0, hours: 0, minutes: 0}
+    const defaultResponse: TimerFormat = {days: 0, hours: 0, minutes: 0}
 
     if (timeDifference > 0) {
         return {

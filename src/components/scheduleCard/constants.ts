@@ -1,6 +1,7 @@
-import {Lesson} from "./type.ts";
+import {Lesson} from "@/components/scheduleCard/type.ts";
 
-export const LESSON_ITEMS:Lesson[] = [
+
+export const LESSON_ITEMS: Lesson[] = [
     {
         id: 1,
         name: "main.mental_arithmetic",

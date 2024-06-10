@@ -1,16 +1,16 @@
-.cardContainer{
+.cardContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
   border: 1px solid var(--color-accent-600);
   height: 100%;
-  gap:16px;
- min-width: 344px;
+  gap: 16px;
+  min-width: 344px;
 }
 
 
-.text{
+.text {
   font-size: 20px;
   font-weight: 400;
   line-height: 20px;
@@ -20,7 +20,7 @@
 
 }
 
-.iconContainer{
+.iconContainer {
   width: 40px;
   height: 40px;
   border-radius: 12px;
@@ -30,15 +30,15 @@
   align-items: center;
 }
 
-.primary{
+.primary {
   background-color: var(--color-accent-200);
 }
 
-.secondary{
+.secondary {
   background-color: var(--color-info-100);
 }
 
-.itemsContainer{
+.itemsContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,17 +48,17 @@
   width: 100%;
 }
 
-.title{
+.title {
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color:var(--color-accent-900)
+  color: var(--color-accent-900)
 
 }
 
-.button{
+.button {
   background-color: var(--color-accent-300);
-  border:none;
+  border: none;
   color: var(--color-accent-900)
 }

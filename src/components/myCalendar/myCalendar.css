@@ -4,19 +4,20 @@
 }
 
 .rbc-header + .rbc-header {
-    border-left:none;
-}
-.rbc-month-view{
-    border:none;
-    border-bottom:solid 1px #ddd;
+    border-left: none;
 }
 
-.rbc-row-bg{
+.rbc-month-view {
+    border: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.rbc-row-bg {
     border-left: solid 1px #ddd;
     border-right: solid 1px #ddd;
 }
 
-.rbc-header{
+.rbc-header {
     text-align: end;
     text-transform: capitalize;
 }
@@ -29,6 +30,6 @@
     white-space: normal;
 }
 
-.rbc-event{
+.rbc-event {
     padding: 0;
 }

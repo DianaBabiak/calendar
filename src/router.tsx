@@ -1,12 +1,6 @@
-import {
-    Navigate,
-    Outlet,
-    RouteObject,
-    RouterProvider,
-    createBrowserRouter,
-} from 'react-router-dom'
+import {createBrowserRouter, Navigate, Outlet, RouteObject, RouterProvider,} from 'react-router-dom'
 
-import { Error404 } from '@/pages/error404'
+import {Error404} from '@/pages/error404'
 import {SignIn} from "@/components/auth/login/singIn";
 import {CalendarPage} from "@/pages/calendar";
 import {Layout} from "@/layout ";
@@ -16,18 +10,18 @@ import {isAuth} from "@/state/selectors.ts";
 
 const publicRoutes: RouteObject[] = [
     {
-        element: <SignIn />,
+        element: <SignIn/>,
         path: '/login',
     },
 ]
 
 const privateRoutes: RouteObject[] = [
     {
-        element: <MainPage />,
+        element: <MainPage/>,
         path: '/',
     },
     {
-        element: <CalendarPage />,
+        element: <CalendarPage/>,
         path: '/calendar',
     },
 ]
@@ -35,14 +29,14 @@ const privateRoutes: RouteObject[] = [
 function PrivateRoutes() {
     const isAuthenticated = useAppSelector(isAuth)
 
-    return isAuthenticated ? <Layout /> : <Navigate to={'/login'} />
+    return isAuthenticated ? <Layout/> : <Navigate to={'/login'}/>
 }
 
 function PublicRoutes() {
 
     const isAuthenticated = useAppSelector(isAuth)
 
-    return isAuthenticated ? <Navigate to={'/'} /> : <Outlet />
+    return isAuthenticated ? <Navigate to={'/'}/> : <Outlet/>
 }
 
 export const router = createBrowserRouter([
@@ -50,20 +44,20 @@ export const router = createBrowserRouter([
         children: [
             {
                 children: privateRoutes,
-                element: <PrivateRoutes />,
+                element: <PrivateRoutes/>,
             },
             {
                 children: publicRoutes,
-                element: <PublicRoutes />,
+                element: <PublicRoutes/>,
             },
         ],
     },
     {
-        element: <Error404 />,
+        element: <Error404/>,
         path: '*',
     },
 ])
 
 export const Router = () => {
-    return <RouterProvider router={router} />
+    return <RouterProvider router={router}/>
 }

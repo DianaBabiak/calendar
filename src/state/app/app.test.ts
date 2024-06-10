@@ -1,5 +1,5 @@
 import {fetchEvents} from "@/state/calendar/calendarSlice.ts";
-import { expect } from '@jest/globals'
+import {expect} from '@jest/globals'
 import {appReducer, clearError, setError, setLanguage, setLoading} from "@/state/app/appSlice.ts";
 
 describe('appReducer', () => {

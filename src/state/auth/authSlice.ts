@@ -1,5 +1,5 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import {loginUserOnBackend } from '@/api/authApi.ts';
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {loginUserOnBackend} from '@/api/authApi.ts';
 import {User} from "@/types/auth.ts";
 
 export const loginUser = createAsyncThunk('auth/loginUser', async (data: { email: string; password: string }) => {
@@ -34,5 +34,5 @@ const authSlice = createSlice({
     },
 })
 
-export const { logout } = authSlice.actions
+export const {logout} = authSlice.actions
 export const authReducer = authSlice.reducer

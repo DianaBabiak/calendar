@@ -6,8 +6,8 @@ import {useAppSelector} from "@/state/store.ts";
 import {currentUser} from "@/state/selectors.ts";
 import classNames from "classnames";
 import {DEFAULT_PHOTO} from "@/constants/user.ts";
-import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router-dom';
+import {useTranslation} from 'react-i18next';
+import {useLocation} from 'react-router-dom';
 
 
 export const Header: React.FC = () => {
@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
     const countMessages = 2
     const wrapperClasses = classNames(styles.wrapper, styles.position)
 
-    const { t } = useTranslation()
+    const {t} = useTranslation()
     const location = useLocation();
 
 

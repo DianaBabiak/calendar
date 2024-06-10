@@ -1,8 +1,8 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:8px;
+  gap: 8px;
   margin-top: 60px;
   font-weight: 400;
   text-align: left;
@@ -13,14 +13,14 @@
 
 }
 
-.active{
+.active {
   font-size: 24px;
   line-height: 21px;
   color: var(--color-accent-600);
 
 }
 
-.usual{
+.usual {
   font-size: 16px;
   line-height: 22px;
   color: var(--color-dark-100);

@@ -1,0 +1,1 @@
+export const FORMAT_DATE: Intl.DateTimeFormatOptions = {hour: '2-digit', minute: '2-digit'}

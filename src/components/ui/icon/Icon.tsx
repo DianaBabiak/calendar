@@ -1,4 +1,5 @@
 import iconSprite from '../../../assets/IconSprite.svg'
+
 interface IconPropsType {
     height?: string
     iconId: string
@@ -6,7 +7,7 @@ interface IconPropsType {
     width?: string
 }
 
-export const Icon = ({ height, iconId, viewBox, width }: IconPropsType) => {
+export const Icon = ({height, iconId, viewBox, width}: IconPropsType) => {
     return (
         <svg
             fill={'none'}

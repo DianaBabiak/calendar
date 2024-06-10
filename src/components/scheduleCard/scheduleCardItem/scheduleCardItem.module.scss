@@ -8,21 +8,21 @@
   border-bottom: 1px solid var(--color-accent-100);
   font-weight: 400;
   text-align: left;
-  color:var(--color-accent-900)
+  color: var(--color-accent-900)
 }
 
 .container:last-child {
   border-bottom: none;
 }
 
-.text{
+.text {
   font-size: 16px;
   line-height: 20px;
   text-align: start;
   width: 130px;
 }
 
-.data{
+.data {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,18 +30,19 @@
   width: 42px;
 }
 
-.day{
+.day {
   font-size: 32px;
   line-height: 32px;
   text-align: center;
 
 }
 
-.month{
+.month {
   font-size: 12px;
   line-height: 16px;
 }
-.time{
+
+.time {
   font-size: 12px;
   line-height: 16px;
   text-align: right;
@@ -49,34 +50,34 @@
 
 }
 
-.informationTeacherContainer{
+.informationTeacherContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:2px;
+  gap: 2px;
 }
 
-.nameTeacher{
+.nameTeacher {
   font-size: 12px;
   font-weight: 300;
   line-height: 12px;
   width: 150px;
 }
 
-.buttonsContainer{
+.buttonsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:10px;
+  gap: 10px;
 }
 
-.primaryButton{
- border:  1px solid var(--color-accent-300);
+.primaryButton {
+  border: 1px solid var(--color-accent-300);
   color: var(--color-accent-900);
 
 }
 
-.secondaryButton{
+.secondaryButton {
   border: none;
   background-color: var(--color-accent-600);
   color: var(--color-light-100);

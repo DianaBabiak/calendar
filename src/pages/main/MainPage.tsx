@@ -7,9 +7,9 @@ import {BalanceCard} from "@/components/balanceCard";
 import {ScheduleCard} from "@/components/scheduleCard";
 
 
-export const MainPage = ()=>{
+export const MainPage = () => {
 
-    return(
+    return (
         <Container className={styles.mainContainer}>
             <div className={styles.cardsContainer}>
                 <PromotionalCard/>

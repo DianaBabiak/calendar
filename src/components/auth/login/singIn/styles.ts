@@ -1,15 +1,15 @@
-import { CSSProperties } from '@/types/common';
+import {CSSProperties} from '@/types/common';
 
 const greyColor = '#ABB2B9'
 
 export default {
     textField: {
-        '.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input':{
-            padding:'10px 12px'
+        '.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input': {
+            padding: '10px 12px'
         },
         '.MuiOutlinedInput-root': {
             borderRadius: '12px',
-            maxHeight:'36px',
+            maxHeight: '36px',
         }
     },
     rememberMeContainer: {
@@ -17,7 +17,7 @@ export default {
     },
     rememberMeLabel: {
         color: greyColor,
-        fontSize:'12px'
+        fontSize: '12px'
     },
     checkbox: {
         '&.MuiCheckbox-root': {
@@ -25,4 +25,4 @@ export default {
         },
     },
 
-} as CSSProperties< 'textField' | 'rememberMeContainer' | 'rememberMeLabel' | 'checkbox' >;
+} as CSSProperties<'textField' | 'rememberMeContainer' | 'rememberMeLabel' | 'checkbox'>;
