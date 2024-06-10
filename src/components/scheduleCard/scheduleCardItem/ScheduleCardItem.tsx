@@ -1,19 +1,19 @@
 import styles from "./scheduleCardItem.module.scss"
-import {Button} from "../../ui/button";
-import {Icon} from "../../ui/icon";
-import {Lesson} from "../type.ts";
 import {useTranslation} from "react-i18next";
+import {Lesson} from "@/components/scheduleCard/type.ts";
+import {Icon} from "@/components/ui/icon";
+import {Button} from "@/components/ui/button";
 
 interface ScheduleCardItemProps {
     item: Lesson
 }
 
-export const ScheduleCardItem = ({item}:ScheduleCardItemProps)=>{
+export const ScheduleCardItem = ({item}: ScheduleCardItemProps) => {
     const {name, day, month, time, teacher} = item
 
-    const { t } = useTranslation()
+    const {t} = useTranslation()
 
-    return(
+    return (
         <div className={styles.container}>
             <div className={styles.data}>
                 <span className={styles.day}>{day}</span>

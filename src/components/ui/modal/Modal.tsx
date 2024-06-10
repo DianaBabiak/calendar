@@ -1,6 +1,6 @@
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
-import { ReactNode } from 'react';
+import {ReactNode} from 'react';
 
 interface ModalProps {
     open: boolean
@@ -8,7 +8,7 @@ interface ModalProps {
     children: ReactNode
 }
 
-export const Modal = ({ open, setOpen, children}: ModalProps) => {
+export const Modal = ({open, setOpen, children}: ModalProps) => {
     const handleClickOpen = () => {
         setOpen(true)
     }

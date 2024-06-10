@@ -3,12 +3,10 @@ import TextField from '@mui/material/TextField';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import { FormEvent, useEffect, useState } from 'react';
-import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
-import { DATE_TIME_FORMAT } from '../ui/modal/constant.ts';
-import { Modal } from '../ui/modal/Modal.tsx';
-import { Event, EventStatus } from '@/types/calendar.ts';
-import { useTranslation } from 'react-i18next';
+import {FormEvent, useEffect, useState} from 'react';
+import {DateTimePicker} from '@mui/x-date-pickers/DateTimePicker';
+import {Event, EVENT_STATUS, EventStatus} from '@/types/calendar.ts';
+import {useTranslation} from 'react-i18next';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
@@ -17,6 +15,8 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import s from "./styles.ts"
 import styles from "./addEditEventModal.module.scss"
+import {DATE_TIME_FORMAT} from "@/components/ui/modal/constant.ts";
+import {Modal} from "@/components/ui/modal";
 
 interface AddEditEventModalProps {
     open: boolean;
@@ -46,7 +46,7 @@ export const AddEditEventModal = ({
     const [isPay, setIsPay] = useState<boolean>(selectedEvent?.isPay || false);
     const [status, setStatus] = useState<EventStatus>(selectedEvent?.status || EventStatus.Planned);
 
-    const { t } = useTranslation()
+    const {t} = useTranslation()
 
     const handleClose = () => {
         setOpen(false)
@@ -107,16 +107,17 @@ export const AddEditEventModal = ({
                             value={status}
                             onChange={(e) => setStatus(e.target.value as EventStatus)}
                         >
-                            <MenuItem value={EventStatus.Planned}>Запланировано</MenuItem>
-                            <MenuItem value={EventStatus.Conducted}>Проведено</MenuItem>
-                            <MenuItem value={EventStatus.Cancellation}>Отменено</MenuItem>
-                            <MenuItem value={EventStatus.Skip}>Пропущено</MenuItem>
-                            <MenuItem value={EventStatus.Available}>Доступно</MenuItem>
-                            <MenuItem value={EventStatus.Busy}>Занято</MenuItem>
+                            <MenuItem value={EventStatus.Planned}>{EVENT_STATUS[EventStatus.Planned]}</MenuItem>
+                            <MenuItem value={EventStatus.Conducted}>{EVENT_STATUS[EventStatus.Conducted]}</MenuItem>
+                            <MenuItem
+                                value={EventStatus.Cancellation}>{EVENT_STATUS[EventStatus.Cancellation]}</MenuItem>
+                            <MenuItem value={EventStatus.Skip}>{EVENT_STATUS[EventStatus.Skip]}</MenuItem>
+                            <MenuItem value={EventStatus.Available}>{EVENT_STATUS[EventStatus.Available]}</MenuItem>
+                            <MenuItem value={EventStatus.Busy}>{EVENT_STATUS[EventStatus.Busy]}</MenuItem>
                         </Select>
                     </FormControl>
                     <FormControlLabel
-                        control={<Checkbox checked={isPay} onChange={(e) => setIsPay(e.target.checked)} />}
+                        control={<Checkbox checked={isPay} onChange={(e) => setIsPay(e.target.checked)}/>}
                         label="Оплачено"
                     />
                 </DialogContent>

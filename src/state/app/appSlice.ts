@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, isAnyOf } from '@reduxjs/toolkit';
+import {createSlice, isAnyOf, PayloadAction} from '@reduxjs/toolkit';
 import {addEvent, deleteEvent, editEvent, fetchEvents} from "@/state/calendar/calendarSlice.ts";
 import {loginUser} from "@/state/auth/authSlice.ts";
 
@@ -12,7 +12,7 @@ interface AppState {
 const initialState: AppState = {
     loading: false,
     error: null,
-    language:'ru'
+    language: 'ru'
 }
 
 const appSlice = createSlice({
@@ -35,7 +35,7 @@ const appSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addMatcher(
-                isAnyOf(fetchEvents.pending, addEvent.pending, deleteEvent.pending, editEvent.pending,loginUser.pending),
+                isAnyOf(fetchEvents.pending, addEvent.pending, deleteEvent.pending, editEvent.pending, loginUser.pending),
                 (state) => {
                     state.loading = true
                     state.error = null
@@ -57,5 +57,5 @@ const appSlice = createSlice({
     },
 })
 
-export const { setLoading, setError, clearError, setLanguage } = appSlice.actions
+export const {setLoading, setError, clearError, setLanguage} = appSlice.actions
 export const appReducer = appSlice.reducer

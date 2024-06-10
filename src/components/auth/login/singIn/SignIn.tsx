@@ -1,10 +1,9 @@
-import { PasswordInfoCards } from "@/components/passwordInfoCard/PasswordInfoCards.tsx";
-import { PreLoader } from "@/components/ui/preloader";
-import { Button } from "@/components/ui/button";
-import { CustomizedSnackbars } from "../../../customizedSnackbars";
-import { ChangeLanguage } from "@/components/changeLanguage";
-import { useTranslation } from "react-i18next";
-import { useSignInForm } from "@/components/auth/login/singIn/hooks/useSignInForm.ts";
+import {PasswordInfoCards} from "@/components/passwordInfoCard/PasswordInfoCards.tsx";
+import {PreLoader} from "@/components/ui/preloader";
+import {Button} from "@/components/ui/button";
+import {ChangeLanguage} from "@/components/changeLanguage";
+import {useTranslation} from "react-i18next";
+import {useSignInForm} from "@/components/auth/login/singIn/hooks/useSignInForm.ts";
 import TextField from "@mui/material/TextField";
 import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -17,22 +16,32 @@ import logo from '../../../../assets/logo.png'
 import s from "./styles.ts"
 import styles from "./signIn.module.scss"
 import {Link} from "react-router-dom";
+import {CustomizedSnackbars} from "@/components/customizedSnackbars";
 
 export const SignIn = () => {
-    const { t } = useTranslation()
-    const { register, handleSubmit, errors, showPassword, handleClickShowPassword, loading, error, onSubmit } = useSignInForm()
+    const {t} = useTranslation()
+    const {
+        register,
+        handleSubmit,
+        errors,
+        showPassword,
+        handleClickShowPassword,
+        loading,
+        error,
+        onSubmit
+    } = useSignInForm()
 
     if (loading) {
-        return <PreLoader />;
+        return <PreLoader/>;
     }
 
     return (
         <div className={styles.container}>
-            {error && <CustomizedSnackbars error={error} isOpen={!!error} />}
+            {error && <CustomizedSnackbars error={error} isOpen={!!error}/>}
 
-            <PasswordInfoCards />
+            <PasswordInfoCards/>
 
-            <img className={styles.logo} alt={'logo'} src={logo} />
+            <img className={styles.logo} alt={'logo'} src={logo}/>
 
             <div className={styles.formContainer}>
                 <h1 className={styles.title}>
@@ -67,7 +76,7 @@ export const SignIn = () => {
                                         aria-label="toggle password visibility"
                                         onClick={handleClickShowPassword}
                                         edge="end"
-                                    >{showPassword ? <VisibilityOff /> : <Visibility />}
+                                    >{showPassword ? <VisibilityOff/> : <Visibility/>}
                                     </IconButton>
                                 </InputAdornment>
                             ),
@@ -76,19 +85,20 @@ export const SignIn = () => {
                     <FormControlLabel
                         sx={s.rememberMeContainer}
                         control={
-                        <Checkbox
-                            {...register('rememberMe')}
-                            sx={s.checkbox}
-                        />
-                    }
-                        label={<Typography variant='subtitle1' sx={s.rememberMeLabel}>{t('auth.remember_me')}</Typography>}
-                        />
+                            <Checkbox
+                                {...register('rememberMe')}
+                                sx={s.checkbox}
+                            />
+                        }
+                        label={<Typography variant='subtitle1'
+                                           sx={s.rememberMeLabel}>{t('auth.remember_me')}</Typography>}
+                    />
                     <Button className={styles.button} isFullWidth={true} size={'large'}>
                         {t('auth.sign_in_button')}
                     </Button>
                     <div className={styles.linksContainer}>
-                            <Link to="#" className={styles.link}>{t('auth.forgot_password')}</Link>
-                            <Link to="#" className={styles.link}>{t("auth.signIn_as_coach")}</Link>
+                        <Link to="#" className={styles.link}>{t('auth.forgot_password')}</Link>
+                        <Link to="#" className={styles.link}>{t("auth.signIn_as_coach")}</Link>
                     </div>
                     <div className={styles.registerLinkContainer}>
                         <span className={styles.link_black}>{t('auth.no_account')}</span>
@@ -96,7 +106,7 @@ export const SignIn = () => {
                     </div>
                 </form>
             </div>
-            <ChangeLanguage />
+            <ChangeLanguage/>
         </div>
     )
 }

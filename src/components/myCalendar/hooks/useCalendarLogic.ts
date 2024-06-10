@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from "@/state/store.ts";
-import { calendarEvents, errorMessage, isLoading } from "@/state/selectors.ts";
-import { addEvent, deleteEvent, editEvent, fetchEvents } from "@/state/calendar/calendarSlice.ts";
-import { v1 } from "uuid";
-import { Event, EventStatus } from "@/types/calendar.ts"
+import {useEffect, useState} from 'react';
+import {useAppDispatch, useAppSelector} from "@/state/store.ts";
+import {calendarEvents, errorMessage, isLoading} from "@/state/selectors.ts";
+import {addEvent, deleteEvent, editEvent, fetchEvents} from "@/state/calendar/calendarSlice.ts";
+import {v1} from "uuid";
+import {Event, EventStatus} from "@/types/calendar.ts"
 
 export const useCalendarLogic = () => {
     const dispatch = useAppDispatch()

@@ -18,12 +18,13 @@
   display: flex;
   align-items: center;
 }
-.name{
+
+.name {
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color:var(--color-accent-600)
+  color: var(--color-accent-600)
 }
 
 .wrapper {
@@ -34,13 +35,13 @@
   font-size: 18px;
   cursor: pointer;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   border: 1px solid var(--color-accent-600);
   overflow: hidden;
 }
 
-.badge{
+.badge {
   position: absolute;
   top: -4px;
   right: -4px;
@@ -65,26 +66,26 @@
   border-radius: 50%;
 }
 
-.title{
+.title {
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  color:var(--color-accent-900)
+  color: var(--color-accent-900)
 
 }
 
-.position{
+.position {
   position: relative;
   overflow: inherit;
 }
 
-.photo{
+.photo {
   width: 40px;
   height: 40px;
 }
 
-.home{
+.home {
   justify-content: space-between;
 
 }

@@ -5,7 +5,7 @@ interface ArrowProps {
     onClick: () => void
 }
 
-export const Arrow = ({ direction, onClick }:ArrowProps) => {
+export const Arrow = ({direction, onClick}: ArrowProps) => {
     return (
         <div
             className={styles.arrow}

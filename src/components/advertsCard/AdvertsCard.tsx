@@ -6,7 +6,7 @@ import {useTranslation} from "react-i18next";
 
 
 export const AdvertsCard = () => {
-    const { t } = useTranslation()
+    const {t} = useTranslation()
     return (
         <Card className={styles.advertsContainer}>
             <div className={styles.contentCard}>
@@ -14,7 +14,7 @@ export const AdvertsCard = () => {
                 <p className={styles.content}>{t('menu.refer_friends')}</p>
                 <Button className={styles.button} size={'small'}>{t('menu.find_out')}</Button>
             </div>
-            <img className={styles.giftImg} alt={'gift'} src={giftImg} />
+            <img className={styles.giftImg} alt={'gift'} src={giftImg}/>
         </Card>
     )
 }

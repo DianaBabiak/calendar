@@ -1,17 +1,17 @@
-import { configureStore } from "@reduxjs/toolkit";
+import {configureStore} from "@reduxjs/toolkit";
 import throttle from 'lodash.throttle';
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
-import {appReducer} from "./app/appSlice.ts";
 import {loadState} from "@/state/utils/loadState.ts";
 import {calendarReducer} from "@/state/calendar/calendarSlice.ts";
 import {authReducer} from "@/state/auth/authSlice.ts";
 import {saveState} from "@/state/utils/saveState.ts";
+import {appReducer} from "@/state/app/appSlice.ts";
 
 const persistedState = loadState() || {
     app: {
         loading: false,
         error: null,
-        language:'ru'
+        language: 'ru'
     },
     auth: {
         user: null,
@@ -20,13 +20,13 @@ const persistedState = loadState() || {
 };
 export const store = configureStore({
     reducer: {
-        app:appReducer,
+        app: appReducer,
         calendar: calendarReducer,
-        auth:authReducer
+        auth: authReducer
     },
-    preloadedState:{
-        app:persistedState.app,
-        auth:persistedState.auth
+    preloadedState: {
+        app: persistedState.app,
+        auth: persistedState.auth
 
     },
 

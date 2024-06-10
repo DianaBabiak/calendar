@@ -8,19 +8,19 @@
   border-bottom: 1px solid var(--color-accent-100);
   font-weight: 400;
   text-align: left;
-  color:var(--color-accent-900)
+  color: var(--color-accent-900)
 }
 
 .container:last-child {
   border-bottom: none;
 }
 
-.text{
+.text {
   font-size: 16px;
   line-height: 20px;
 }
 
-.count{
+.count {
   width: 40px;
   height: 40px;
   background-color: var(--color-accent-100);

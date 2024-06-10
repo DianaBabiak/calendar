@@ -6,7 +6,7 @@ export interface CardProps extends ComponentPropsWithoutRef<'div'> {
     isBorder?: boolean
 }
 
-export const Card = ({isBorder = false, className, ...rest }:CardProps) => {
+export const Card = ({isBorder = false, className, ...rest}: CardProps) => {
 
     const cardClassNames = classNames(styles.card, {
         [styles.withBorder]: isBorder,

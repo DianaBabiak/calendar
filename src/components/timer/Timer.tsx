@@ -1,14 +1,15 @@
 import {useEffect, useState} from 'react';
 import styles from './timer.module.scss';
-import {TimerFormat} from "./type.ts";
-import {calculateTimeLeft} from "./heplers/calculateTimeLeft.ts";
+
 import {renderTimerComponents} from "@/components/timer/heplers/renderTimerComponents.tsx";
+import {TimerFormat} from "@/components/timer/type.ts";
+import {calculateTimeLeft} from "@/components/timer/heplers/calculateTimeLeft.ts";
 
 interface TimerProps {
     targetDate: string
 }
 
-export const Timer = ({ targetDate }:TimerProps) => {
+export const Timer = ({targetDate}: TimerProps) => {
     const [timeLeft, setTimeLeft] = useState<TimerFormat>(calculateTimeLeft(targetDate))
 
     useEffect(() => {

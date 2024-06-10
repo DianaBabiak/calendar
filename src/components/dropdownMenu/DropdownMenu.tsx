@@ -7,20 +7,20 @@ import {logout} from "@/state/auth/authSlice.ts";
 import {useTranslation} from "react-i18next";
 
 interface DropdownMenuProps {
-    setIsOpen:(isOpen:boolean)=>void
+    setIsOpen: (isOpen: boolean) => void
 }
 
-export const DropdownMenu=({setIsOpen}:DropdownMenuProps)=>{
+export const DropdownMenu = ({setIsOpen}: DropdownMenuProps) => {
     const dispatch = useAppDispatch()
-    const { t } = useTranslation()
-    const handleLogout=()=>{
+    const {t} = useTranslation()
+    const handleLogout = () => {
         dispatch(logout())
     }
 
     const handleClose = () => {
         setIsOpen(false);
     };
-    return(
+    return (
         <div className={styles.mainContainer}>
             <div className={styles.wrapper}>
                 <div onClick={handleClose} className={styles.crossIcon}>
@@ -28,7 +28,7 @@ export const DropdownMenu=({setIsOpen}:DropdownMenuProps)=>{
                 </div>
                 <span className={styles.title}>{t('header.user_switch')}</span>
                 <div className={styles.usersContainer}>
-                    {AVAILABLE_USERS.map(user=><UserItem key={user.id} availableUser={user}/>)}
+                    {AVAILABLE_USERS.map(user => <UserItem key={user.id} availableUser={user}/>)}
                 </div>
                 <div className={styles.line}></div>
                 <div className={styles.exitContainer}>

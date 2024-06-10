@@ -1,15 +1,15 @@
-import { Calendar } from 'react-big-calendar';
+import {Calendar} from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import { CalendarToolbar } from '../calendarToolbar';
-import { InfoEventModal } from '../infoEventModal';
 import styles from './myCalendar.module.scss';
-import { PreLoader } from "@/components/ui/preloader";
-import { localizer } from "@/components/myCalendar/constants.ts";
-import { CustomizedSnackbars } from "../customizedSnackbars";
-import './myCalendare.css'
-import { EventComponent } from "@/components/myCalendar/eventComponent";
+import {PreLoader} from "@/components/ui/preloader";
+import {localizer} from "@/components/myCalendar/constants.ts";
+import './myCalendar.css'
+import {EventComponent} from "@/components/myCalendar/eventComponent";
 import {useCalendarLogic} from "@/components/myCalendar/hooks/useCalendarLogic.ts";
 import {AddEditEventModal} from "@/components/addEditEventModal";
+import {CustomizedSnackbars} from "@/components/customizedSnackbars";
+import {CalendarToolbar} from "@/components/calendarToolbar";
+import {InfoEventModal} from "@/components/infoEventModal";
 
 export const MyCalendar = () => {
     const {
@@ -32,18 +32,18 @@ export const MyCalendar = () => {
     } = useCalendarLogic()
 
     if (loading) {
-        return <PreLoader />
+        return <PreLoader/>
     }
 
     return (
         <div className={styles.container}>
-            <CustomizedSnackbars isOpen={!!error} error={error} />
+            <CustomizedSnackbars isOpen={!!error} error={error}/>
             <Calendar
                 localizer={localizer}
                 events={events}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ height: '100%' }}
+                style={{height: '100%'}}
                 culture="ru"
                 selectable
                 onSelectEvent={handleSelectEvent}

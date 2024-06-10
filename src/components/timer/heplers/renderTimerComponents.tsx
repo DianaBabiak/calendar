@@ -15,7 +15,7 @@ export const renderTimerComponents = (timeLeft: TimerFormat) => {
             <span key={interval} className={styles.interval}>
             {timeLeft[key]} <span className={styles.label}>{TIME_LABEL[key]}</span>
             </span>
-    );
+        );
     });
 
     return timerComponents;

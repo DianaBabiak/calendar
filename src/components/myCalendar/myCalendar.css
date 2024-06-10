@@ -1,0 +1,35 @@
+.rbc-off-range-bg {
+    background: none;
+    opacity: 1;
+}
+
+.rbc-header + .rbc-header {
+    border-left: none;
+}
+
+.rbc-month-view {
+    border: none;
+    border-bottom: solid 1px #ddd;
+}
+
+.rbc-row-bg {
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #ddd;
+}
+
+.rbc-header {
+    text-align: end;
+    text-transform: capitalize;
+}
+
+.rbc-today {
+    background-color: #EEEEFF;
+}
+
+.rbc-ellipsis, .rbc-show-more, .rbc-row-segment .rbc-event-content, .rbc-event-label {
+    white-space: normal;
+}
+
+.rbc-event {
+    padding: 0;
+}

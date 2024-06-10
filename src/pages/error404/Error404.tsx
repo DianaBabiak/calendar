@@ -5,11 +5,11 @@ import img from '../../assets/404.svg'
 export const Error404 = () => {
     return (
         <div className={s.wrapper}>
-            <img alt={'error-404'} src={img} />
+            <img alt={'error-404'} src={img}/>
             <p className={s.text}>
                 Sorry! Page not found!
             </p>
-            <a  href={'/'}>
+            <a href={'/'}>
                 Back to home page
             </a>
         </div>
