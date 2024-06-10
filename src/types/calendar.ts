@@ -16,7 +16,7 @@ export enum EventStatus {
     Busy = 'Busy'
 }
 
-export const EVENT_STATUS = {
+export const EVENT_STATUS: Record<EventStatus, string> = {
     [EventStatus.Planned]: 'запланировано',
     [EventStatus.Conducted]: 'проведено',
     [EventStatus.Cancellation]: 'отменено',
