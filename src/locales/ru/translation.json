@@ -1,0 +1,62 @@
+{
+  "auth": {
+    "login": "Логин",
+    "password": "Пароль",
+    "signIn": "Вход",
+    "sign_in_button": "Войти",
+    "remember_me": "Запомнить меня",
+    "forgot_password": "Я забыл пароль",
+    "signIn_as_coach": "Войти как тренер",
+    "no_account": "Нет аккаунта?",
+    "register": "Зарегистрироваться"
+  },
+  "menu": {
+    "home": "Главная",
+    "calendar": "Расписание",
+    "payments": "Оплата",
+    "achievements": "Достижения",
+    "simulators": "Тренажеры",
+    "library": "Библиотека",
+    "connectivity_check": "Проверка связи",
+    "settings": "Настройки",
+    "questions": "Вопросы",
+    "learn_for_free": "Учитесь бесплатно",
+    "refer_friends": "Приводите друзей с детьми заниматься в Sirius Future и получайте подарки!",
+    "find_out": "Узнать"
+  },
+  "header": {
+    "welcome": "Добро пожаловать,",
+    "user_switch": "Смена пользователя",
+    "this_is_you": "Это вы",
+    "exit": "Выход"
+  },
+  "main": {
+    "discount_offer": "До 31 декабря любой курс со скидкой 20%",
+    "discount_details": "До конца года у вас есть уникальная возможность воспользоваться нашей новогодней скидкой 20% на любой курс!",
+    "next_lesson_starts_in": "Следующее занятие начнется через:",
+    "homework": "Домашние Задания",
+    "reports_from_teachers": "Отчеты от учителей",
+    "lesson_balance": "Баланс занятий",
+    "mental_arithmetic": "Ментальная Арифметика",
+    "programming": "Программирование",
+    "speed_reading": "Скорочтение",
+    "upcoming_lessons": "Ближайшие уроки",
+    "may": "мая",
+    "october": "октября",
+    "november": "ноября"
+  },
+  "calendar": {
+    "select_subject": "Выбрать предмет",
+    "today": "Сегодня",
+    "change_schedule": "Изменить расписание"
+  },
+  "events": {
+    "new_event": "Новое событие",
+    "edit_event": "Редактирование события",
+    "close": "Закрыть",
+    "save": "Записать",
+    "event_info": "Информация о событии",
+    "delete": "Удалить",
+    "edit": "Редактировать"
+  }
+}

@@ -2,14 +2,13 @@ import {useEffect, useState} from 'react';
 import styles from './timer.module.scss';
 import {TimerFormat} from "./type.ts";
 import {calculateTimeLeft} from "./heplers/calculateTimeLeft.ts";
-import {TIME_LABEL} from "./constants.ts";
+import {renderTimerComponents} from "@/components/timer/heplers/renderTimerComponents.tsx";
 
 interface TimerProps {
     targetDate: string
 }
 
 export const Timer = ({ targetDate }:TimerProps) => {
-    const timerComponents: JSX.Element[] = []
     const [timeLeft, setTimeLeft] = useState<TimerFormat>(calculateTimeLeft(targetDate))
 
     useEffect(() => {
@@ -20,18 +19,7 @@ export const Timer = ({ targetDate }:TimerProps) => {
         return () => clearInterval(timerId);
     }, [targetDate])
 
-    Object.keys(timeLeft).forEach((interval) => {
-        const key = interval as keyof TimerFormat;
-        if (!timeLeft[key]) {
-            return
-        }
-
-        timerComponents.push(
-            <span key={interval} className={styles.interval}>
-        {timeLeft[key]} <span className={styles.label}>{TIME_LABEL[key]}</span>
-      </span>
-        )
-    });
+    const timerComponents = renderTimerComponents(timeLeft)
 
     return (
         <div className={styles.timer}>
