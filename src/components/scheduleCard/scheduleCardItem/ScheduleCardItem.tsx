@@ -2,6 +2,7 @@ import styles from "./scheduleCardItem.module.scss"
 import {Button} from "../../ui/button";
 import {Icon} from "../../ui/icon";
 import {Lesson} from "../type.ts";
+import {useTranslation} from "react-i18next";
 
 interface ScheduleCardItemProps {
     item: Lesson
@@ -10,13 +11,15 @@ interface ScheduleCardItemProps {
 export const ScheduleCardItem = ({item}:ScheduleCardItemProps)=>{
     const {name, day, month, time, teacher} = item
 
+    const { t } = useTranslation()
+
     return(
         <div className={styles.container}>
             <div className={styles.data}>
                 <span className={styles.day}>{day}</span>
-                <span className={styles.month}>{month}</span>
+                <span className={styles.month}>{t(month)}</span>
             </div>
-            <span className={styles.text}>{name}</span>
+            <span className={styles.text}>{t(name)}</span>
             <span className={styles.time}>{time}</span>
             <div className={styles.informationTeacherContainer}>
                 <Icon iconId={'user'} height={'16px'} width={'16px'} viewBox={'0 0 16b 16'}/>

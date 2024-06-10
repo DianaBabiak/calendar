@@ -1,0 +1,62 @@
+{
+  "auth": {
+    "login": "Login",
+    "password": "Password",
+    "signIn": "Sign In",
+    "sign_in_button": "Sign In",
+    "remember_me": "Remember Me",
+    "forgot_password": "I forgot my password",
+    "signIn_as_coach": "Sign in as coach",
+    "no_account": "No account?",
+    "register": "Register"
+  },
+  "menu": {
+    "home": "Home",
+    "calendar": "Calendar",
+    "payments": "Payments",
+    "achievements": "Achievements",
+    "simulators": "Simulators",
+    "library": "Library",
+    "connectivity_check": "Connectivity Check",
+    "settings": "Settings",
+    "questions": "Questions",
+    "learn_for_free": "Learn for free",
+    "refer_friends": "Refer friends with children to Sirius Future and get gifts!",
+    "find_out": "Find out"
+  },
+  "header": {
+    "welcome": "Welcome,",
+    "user_switch": "Switch User",
+    "this_is_you": "This is you",
+    "exit": "Exit"
+  },
+  "main": {
+    "discount_offer": "Until December 31, any course with a 20% discount",
+    "discount_details": "Until the end of the year, you have a unique opportunity to take advantage of our New Year's 20% discount on any course!",
+    "next_lesson_starts_in": "The next lesson starts in:",
+    "homework": "Homework",
+    "reports_from_teachers": "Reports from teachers",
+    "lesson_balance": "Lesson Balance",
+    "mental_arithmetic": "Mental Arithmetic",
+    "programming": "Programming",
+    "speed_reading": "Speed Reading",
+    "upcoming_lessons": "Upcoming Lessons",
+    "may": "May",
+    "october": "October",
+    "november": "November"
+  },
+  "calendar": {
+    "select_subject": "Select Subject",
+    "today": "Today",
+    "change_schedule": "Change Schedule"
+  },
+  "events": {
+    "new_event": "New Event",
+    "edit_event": "Edit Event",
+    "close": "Close",
+    "save": "Save",
+    "event_info": "Event Information",
+    "delete": "Delete",
+    "edit": "Edit"
+  }
+}

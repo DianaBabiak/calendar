@@ -2,48 +2,57 @@ import { MenuItem } from "@/types/menu";
 
 export const MENU_ITEMS: MenuItem[] = [
     {
-        name: 'Главная',
-        iconId: '',
-        url: '/'
+        name: 'menu.home',
+        iconId: 'home',
+        url: '/',
+        isDisabled: false
     },
     {
-        name: 'Расписание',
-        iconId: '',
-        url: '/calendar'
+        name: 'menu.calendar',
+        iconId: 'calendar',
+        url: '/calendar',
+        isDisabled: false
     },
     {
-        name: 'Оплата',
-        iconId: '',
-        url: '/'
+        name: 'menu.payments',
+        iconId: 'wallet',
+        url: '/*',
+        isDisabled: true
     },
     {
-        name: 'Достижения',
-        iconId: '',
-        url: '/'
+        name: 'menu.achievements',
+        iconId: 'cup',
+        url: '/*',
+        isDisabled: true
     },
     {
-        name: 'Тренажеры',
-        iconId: '',
-        url: '/'
+        name: 'menu.simulators',
+        iconId: 'simulators',
+        url: '/*',
+        isDisabled: true
     },
     {
-        name: 'Библиотека',
-        iconId: '',
-        url: '/'
+        name: 'menu.library',
+        iconId: 'folder',
+        url: '/*',
+        isDisabled: true
     },
     {
-        name: 'Проверка связи',
-        iconId: '',
-        url: '/'
+        name: 'menu.connectivity_check',
+        iconId: 'customer',
+        url: '/*',
+        isDisabled: true
     },
     {
-        name: 'Настройки',
-        iconId: '',
-        url: '/'
+        name: 'menu.settings',
+        iconId: 'settings',
+        url: '/*',
+        isDisabled: true
     },
     {
-        name: 'Вопросы',
-        iconId: '',
-        url: '/'
-    },
-]
+        name: 'menu.questions',
+        iconId: 'question',
+        url: '/*',
+        isDisabled: true
+    }
+];

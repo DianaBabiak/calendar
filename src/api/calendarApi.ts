@@ -1,5 +1,5 @@
 import {v1} from "uuid";
-import {Event} from "../components/myCalendar"
+import {Event, EventStatus} from "@/types/calendar.ts"
 
 export const fetchEventsFromBackend = async (): Promise<Event[]> => {
     return new Promise((resolve) => {
@@ -7,9 +7,51 @@ export const fetchEventsFromBackend = async (): Promise<Event[]> => {
             resolve([
                 {
                     id: v1(),
-                    title: '10.00-12.00 Ментальная арифметика',
+                    title: 'Ментальная арифметика',
                     start: new Date(2024, 5, 5, 10, 0),
                     end: new Date(2024, 5, 5, 12, 0),
+                    isPay: false,
+                    status: EventStatus.Planned,
+                },
+                {
+                    id: v1(),
+                    title: 'Ментальная арифметика',
+                    start: new Date(2024, 5, 6, 14, 0),
+                    end: new Date(2024, 5, 6, 15, 0),
+                    isPay: true,
+                    status: EventStatus.Conducted,
+                },
+                {
+                    id: v1(),
+                    title: 'Ментальная математика',
+                    start: new Date(2024, 5, 7, 17, 0),
+                    end: new Date(2024, 5, 7, 18, 30),
+                    isPay: false,
+                    status: EventStatus.Cancellation,
+                },
+                {
+                    id: v1(),
+                    title: 'Ментальная арифметика',
+                    start: new Date(2024, 5, 8, 9, 0),
+                    end: new Date(2024, 5, 8, 11, 0),
+                    isPay: true,
+                    status: EventStatus.Skip,
+                },
+                {
+                    id: v1(),
+                    title: 'Ментальная арифметика',
+                    start: new Date(2024, 5, 9, 19, 0),
+                    end: new Date(2024, 5, 9, 21, 0),
+                    isPay: true,
+                    status: EventStatus.Available,
+                },
+                {
+                    id: v1(),
+                    title: 'Ментальная арифметика',
+                    start: new Date(2024, 5, 10, 10, 0),
+                    end: new Date(2024, 5, 10, 18, 0),
+                    isPay: false,
+                    status: EventStatus.Busy,
                 },
             ])
         }, 1000);

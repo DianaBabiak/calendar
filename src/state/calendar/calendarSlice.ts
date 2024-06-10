@@ -1,11 +1,11 @@
-import {createAsyncThunk, createSlice, isAnyOf, PayloadAction} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {
     addEventToBackend,
     deleteEventFromBackend,
     editEventOnBackend,
     fetchEventsFromBackend
 } from "@/api/calendarApi.ts";
-import {Event} from "../../components/myCalendar"
+import {Event} from "@/types/calendar.ts"
 
 export const fetchEvents = createAsyncThunk('events/fetchEvents', async () => {
     return await fetchEventsFromBackend()
@@ -25,14 +25,10 @@ export const editEvent = createAsyncThunk('events/editEvent', async (updatedEven
 
 interface CalendarState {
     events: Event[]
-    loading: boolean
-    error: string | null
 }
 
 const initialState: CalendarState = {
     events: [],
-    loading: false,
-    error: null,
 }
 
 const calendarSlice = createSlice({
@@ -42,38 +38,20 @@ const calendarSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchEvents.fulfilled, (state, action: PayloadAction<Event[]>) => {
-                state.loading = false
                 state.events = action.payload
             })
             .addCase(addEvent.fulfilled, (state, action: PayloadAction<Event>) => {
-                state.loading = false
                 state.events.push(action.payload)
             })
             .addCase(deleteEvent.fulfilled, (state, action: PayloadAction<string>) => {
-                state.loading = false
                 state.events = state.events.filter(event => event.id !== action.payload)
             })
             .addCase(editEvent.fulfilled, (state, action: PayloadAction<Event>) => {
-                state.loading = false
                 const index = state.events.findIndex(event => event.id === action.payload.id)
                 if (index !== -1) {
                     state.events[index] = action.payload
                 }
             })
-            .addMatcher(
-                isAnyOf(fetchEvents.pending, addEvent.pending, deleteEvent.pending, editEvent.pending),
-                (state) => {
-                    state.loading = true
-                    state.error = null
-                }
-            )
-            .addMatcher(
-                isAnyOf(fetchEvents.rejected, addEvent.rejected, deleteEvent.rejected, editEvent.rejected),
-                (state, action) => {
-                    state.loading = false
-                    state.error = action.error.message || 'An error occurred'
-                }
-            )
     },
 })
 
