@@ -7,6 +7,8 @@ import {currentUser} from "@/state/selectors.ts";
 import classNames from "classnames";
 import {DEFAULT_PHOTO} from "@/constants/user.ts";
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+
 
 export const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,18 +17,27 @@ export const Header: React.FC = () => {
     const wrapperClasses = classNames(styles.wrapper, styles.position)
 
     const { t } = useTranslation()
+    const location = useLocation();
+
 
     const handleClick = () => {
         setIsOpen(true);
-    };
+    }
+
+    const isHomePage = location.pathname === '/'
+    const headerClasses = classNames(styles.header, {
+        [styles.home]: isHomePage,
+    })
 
     return (
-        <header className={styles.header}>
-            <div>
-                <span className={styles.title}>{t('header.welcome')} </span>
-                <span className={styles.name}>{user?.name} </span>
-                <span className={styles.title}>!</span>
-            </div>
+        <header className={headerClasses}>
+            {isHomePage && (
+                <div>
+                    <span className={styles.title}>{t('header.welcome')} </span>
+                    <span className={styles.name}>{user?.name} </span>
+                    <span className={styles.title}>!</span>
+                </div>
+            )}
             <div className={styles.nav}>
                 <div className={wrapperClasses}>
                     <Icon iconId={"message"}/>

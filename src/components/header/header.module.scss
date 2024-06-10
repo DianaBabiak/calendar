@@ -1,12 +1,13 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 12px 20px;
   height: 66px;
   position: relative;
+  width: 1174px;
 }
 
 .logo img {
@@ -83,3 +84,7 @@
   height: 40px;
 }
 
+.home{
+  justify-content: space-between;
+
+}
