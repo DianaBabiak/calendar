@@ -1,20 +1,15 @@
-# Мой Проект
+# Student Account
 
-Личный кабинет для учеников
+Student Account is a modern student portal developed to provide easy access to class schedules and essential academic information. Please note that this project is currently under active development.
 
-## Описание
+## Technology Stack
 
-Этот проект представляет собой личный кабинет для учеников, разработанный с использованием современных технологий. Он
-предоставляет удобный доступ к учебным материалам, расписанию занятий, и общению с учителями и другими студентами.
-
-## Технологии
-
-- **Vite**: Быстрый сборщик приложений для современных веб-разработчиков.
-- **React**: JavaScript-библиотека для создания пользовательских интерфейсов.
-- **TypeScript**: Статически типизированный JavaScript для повышения надежности и поддержки кода.
-- **React Hook Form**: Простая и интуитивная библиотека для управления формами в React.
-- **react-big-calendar**: Компонент для отображения календаря событий в приложении.
-- **Redux Toolkit**: Официальное рекомендуемое средство для управления состоянием в React-приложениях.
-- **Jest**: Фреймворк для тестирования JavaScript кода.
-- **React Router Dom**: Навигационная библиотека для React.
-- **i18next** — это библиотека , которая обеспечивает поддержку локализации и интернационализации приложений.
+- **Vite:** Frontend build tool that provides fast refresh and great development experience.
+- **React:** Frontend framework for building the user interface.
+- **TypeScript:** Programming language for type-checking and improved developer experience.
+- **React Hook Form:** Library for flexible and efficient form validation.
+- **react-big-calendar:** React component for displaying a calendar with events.
+- **Redux Toolkit:** State management library for predictable state containers.
+- **Jest:** JavaScript testing framework for unit testing.
+- **React Router Dom:** Library for declarative routing in React applications.
+- **i18next:** Internationalization framework for localization and translation.
